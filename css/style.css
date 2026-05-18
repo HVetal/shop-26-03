@@ -13,51 +13,10 @@
     --registr-bgnd: #F8F3F4;
     --registr-color: #A4A4A4;
     --registr-text: #B1B1B1;
+    --menu-text: #6F6E6E;
 }
 
-.icon-color_static {
-    fill: var(--icon-color);
-}
 
-.footer__socials_link:hover .icon-color_static {
-    fill: var(--pink);
-}
-
-.icon-color_social--letter {
-    fill: var(--black);
-}
-
-.footer__socials_link:hover .icon-color_social--letter {
-    fill: var(--icon-color);
-}
-
-.footer__socials_link:active .icon-color_social--letter {
-    fill: var(--grey);
-}
-
-.footer__socials_link:focus .icon-color_social--letter {
-    fill: var(--black);
-}
-
-.icon-color_social--insta {
-    fill: var(--pink);
-}
-
-.footer__socials_link--insta:hover .icon-color_social--insta {
-    fill: var(--icon-color);
-}
-
-.footer__socials_link--insta:hover .icon-color_static {
-    fill: var(--pink);
-}
-
-.footer__socials_link--insta:focus .icon-color_static {
-    fill: var(--black);
-}
-
-.footer__socials_link--insta:active .icon-color_static {
-    fill: var(--grey);
-}
 
 .page {
     font-family: "Lato", sans-serif;
@@ -92,23 +51,43 @@
     margin: 0 auto;
 }
 
-.header__nav {
-    display: none;
-}
-
 .header__wrp {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 75px;
+    position: relative;
+}
+
+.header__wrp-controls {
+    display: flex;
+    align-items: center;
 }
 
 .header__logo {
     margin: 0 41px 0 0;
 }
 
-.header__link {
+.header__reg {
     margin: 0 0 0 31px;
+}
+
+.header__cart {
+    margin: 0 0 0 31px;
+    position: relative;
+}
+
+.header__cart::after {
+    position: absolute;
+    content: "5";
+    font-size: 12px;
+    line-height: 100%;
+    color: var(--white);
+    background-color: var(--pink);
+    border-radius: 50%;
+    top: -8px;
+    right: -10px;
+    padding: 4px 6px;
 }
 
 .icon-color_static:hover {
@@ -129,7 +108,92 @@
 }
 
 .header__nav {
+    position: absolute;
+    width: 232px;
+    height: 764px;
+    background-color: var(--white);
+    color: var(--black);
+    right: -232px;
+    top: 75px;
     display: none;
+}
+
+.header__nav-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin: 34px 0 27px 34px;
+}
+
+.menu-item__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--pink);
+    text-transform: uppercase;
+    margin: 20px 0 12px 33px;
+}
+
+.menu-item__sub-item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--menu-text);
+    margin: 0 0 11px 54px;
+}
+
+.menu-item__link {
+    text-decoration: none;
+}
+
+/* .header-burger:hover+.header__nav,
+.header-burger:focus+.header__nav {
+    display: block;
+} */
+
+.header__nav:hover {
+    display: block;
+}
+
+.wrp {
+    width: 100%;
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+
+.header__search {
+    fill: var(--white);
+}
+
+.header__search_btn {
+    background-color: var(--black);
+    border: 0;
+    margin-right: 15px;
+}
+
+.header__search_loope:hover {
+    fill: var(--pink);
+}
+
+.header__search_loope:focus {
+    fill: var(--light-pink);
+}
+
+.header__search_loope:active {
+    fill: var(--grey);
+}
+
+.header__search_input {
+    width: 170px;
+    height: 27px;
+    border: 1px solid var(--white);
+    border-radius: 2px;
+    margin-right: 15px;
 }
 
 .brand {
@@ -552,6 +616,50 @@
     margin-left: 7px;
 }
 
+.icon-color_static {
+    fill: var(--icon-color);
+}
+
+.footer__socials_link:hover .icon-color_static {
+    fill: var(--pink);
+}
+
+.icon-color_social--letter {
+    fill: var(--black);
+}
+
+.footer__socials_link:hover .icon-color_social--letter {
+    fill: var(--icon-color);
+}
+
+.footer__socials_link:active .icon-color_social--letter {
+    fill: var(--grey);
+}
+
+.footer__socials_link:focus .icon-color_social--letter {
+    fill: var(--black);
+}
+
+.icon-color_social--insta {
+    fill: var(--pink);
+}
+
+.footer__socials_link--insta:hover .icon-color_social--insta {
+    fill: var(--icon-color);
+}
+
+.footer__socials_link--insta:hover .icon-color_static {
+    fill: var(--pink);
+}
+
+.footer__socials_link--insta:focus .icon-color_static {
+    fill: var(--black);
+}
+
+.footer__socials_link--insta:active .icon-color_static {
+    fill: var(--grey);
+}
+
 .registration {
     width: 1600px;
     height: 148px;
@@ -679,6 +787,22 @@
     margin-bottom: 96px;
     color: var(--white);
 }
+
+.registration__btn:active {
+    background-color: var(--light-pink);
+}
+
+.registration__btn:hover {
+    color: var(--grey);
+    border: 1px solid var(--grey);
+}
+
+.registration__btn:focus {
+    color: var(--grey);
+    /* border: 1px solid var(--grey); */
+    outline: 1px solid var(--grey);
+}
+
 
 .registration__content {
     margin-left: 128px;
