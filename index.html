@@ -14,10 +14,13 @@
         <div class="container header__wrp">
             <div class="header__wrp-controls">
                 <a href="index.html"><img class="header__logo" src="img/logo.svg" alt="logo"></a>
-                <label>
-                    <input class="header__search_input" type="text">
-                    <span class="visually-hidden">Search</span>
-                </label>
+                <form action="">
+                    <label>
+                        <input class="header__search_input" type="search" placeholder="Search" id="search">
+                        <span class="visually-hidden">Search</span>
+                    </label>
+                </form>
+
                 <button class="header__search header__search_btn">
                     <svg class="header__search_loope" width="26" height="27" viewBox="0 0 26 27"
                         xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +118,7 @@
         <div class="wrp" id="wrp"></div>
     </header>
     <main>
-        <section class="brand">
+        <section class="brand" id="bgnd">
             <img class="brand__img" src="img/man.jpg" alt="man">
             <div class="brand__wrp">
                 <h1 class="brand__title">the brand<span class="brand__subtitle">of luxerious&nbsp;<span
@@ -343,9 +346,12 @@
 
     let wrp = document.getElementById('wrp');
 
+    let bgnd = document.getElementById('bgnd');
+
     button.addEventListener('click', function () {
         navigation.classList.toggle('display-block');
         wrp.classList.toggle('display-block');
+        bgnd.classList.toggle('brand__overlay');
     });
 </script>
 
