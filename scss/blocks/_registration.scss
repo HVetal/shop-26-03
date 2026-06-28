@@ -1,0 +1,162 @@
+.registration {
+    width: 1600px;
+    height: 148px;
+    margin: 0 auto;
+    background-color: $registr-bgnd;
+
+    &__header {
+        height: 148px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        @include font (24px);
+        color: $pink;
+    }
+
+    &__wrp {
+        background-color: $white;
+        display: flex;
+        margin-top: 64px;
+    }
+
+    &__legend {
+        @include font (16px);
+        color: $black;
+        margin-bottom: 20px;
+    }
+
+    &__form_name,
+    &__form_login {
+        display: flex;
+        flex-direction: column;
+        border: none;
+    }
+
+    &__first-name,
+    &__last-name,
+    &__email,
+    &__password {
+        width: 360px;
+        height: 45px;
+        border: 1px solid $registr-color;
+        color: $registr-text;
+        @include font (13px);
+        padding-left: 17px;
+    }
+
+    &__first-name,
+    &__email {
+        margin-bottom: 20px;
+    }
+
+    &__last-name {
+        margin-bottom: 31px;
+    }
+
+    &__password {
+        margin-bottom: 15px;
+    }
+
+    &__form_gender {
+        display: flex;
+        margin-bottom: 33px;
+    }
+
+    &__gender {
+        display: none;
+        padding-left: 27px;
+    }
+
+    &__gender_label {
+        margin-right: 20px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            border: 1px solid $registr-color;
+        }
+    }
+
+    &__gender_span {
+        @include font (11px);
+        color: $black;
+        padding-left: 27px;
+    }
+
+    &__gender:checked+&__gender_label::before {
+        background: $registr-color;
+        background-size: 10px 10px;
+    }
+
+    &__form_text {
+        width: 360px;
+        @include font (13px);
+        color: $registr-text;
+        margin-bottom: 39px;
+    }
+
+    &__btn {
+        padding: 16px 29px;
+        border: none;
+        background-color: $pink;
+        margin-bottom: 96px;
+        color: $white;
+
+        &:active {
+            background-color: $light-pink;
+        }
+
+        &:hover {
+            color: $grey;
+            outline: 1px solid $grey;
+        }
+
+        &:focus {
+            color: grey;
+            outline: 1px solid $grey;
+        }
+    }
+
+    &__content {
+        margin-left: 128px;
+    }
+
+    &__content_title {
+        @include font (24px);
+        text-transform: uppercase;
+        color: $total-black;
+        margin-bottom: 22px;
+    }
+
+    &__content_text {
+        @include font (24px);
+        color: $total-black;
+        margin-bottom: 21px;
+    }
+
+    &__content_item {
+        @include font (24px);
+        color: $total-black;
+        margin-bottom: 16px;
+        padding-left: 42px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 16px;
+            background-image: url(../img/checkmark.svg);
+            background-size: 20px 16px;
+            left: 0;
+        }
+    }
+
+}

@@ -1,0 +1,232 @@
+.cart {
+    width: 1600px;
+    height: 148px;
+    margin: 0 auto;
+    background-color: $registr-bgnd;
+    margin-bottom: 96px;
+
+    &__header {
+        height: 148px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__title {
+        text-transform: uppercase;
+        @include font (24px);
+        color: $pink;
+    }
+
+    &__wrp {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__card {
+        display: flex;
+        box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+        margin-bottom: 40px;
+        width: 652px;
+    }
+
+    &__card_wrp {
+        display: flex;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+
+    &__card_discriptions {
+        margin: 22px 0 0 31px;
+    }
+
+    &__card-property {
+        @include font (22px);
+        color: $card-property;
+    }
+
+    &__card_price-color {
+        color: $pink
+    }
+
+    &__card_title {
+        @include font(24px);
+        text-transform: uppercase;
+        color: $black;
+        margin-bottom: 42px;
+    }
+
+    &__card-value {
+        text-align: center;
+        width: 44px;
+        margin-left: 24px;
+    }
+
+    &__card_quanity-border {
+        border: 1px solid $cart-quanity-border;
+        @include font (18px);
+    }
+
+    &__btn {
+        width: 652px;
+        display: flex;
+        justify-content: space-between;
+        margin: 72px 0 128px 0;
+    }
+
+    &__btn_clear,
+    &__btn_continue {
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 1);
+        padding: 17px 40px;
+        background-color: $white;
+        border: 1px solid rgba(164, 164, 164, 1);
+    }
+
+    &__btn_clear:focus,
+    &__btn_continue:focus {
+        color: $pink;
+        outline: 1px solid $pink;
+        border: 1px solid $pink;
+    }
+
+    &__btn_clear:hover,
+    &__btn_continue:hover {
+        color: $black;
+        background: $light-pink;
+        outline: 1px solid $grey;
+    }
+
+    &__btn_clear:active,
+    &__btn_continue:active {
+        color: $white;
+        background: $pink;
+        outline: 1px solid $pink;
+    }
+
+    &__form {
+
+        &_legend {
+            @include font (16px);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: $black;
+        }
+
+        &_adress {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &_property {
+            width: 360px;
+            height: 45px;
+            @include font (13px);
+            color: $registr-text;
+            padding-left: 17px;
+            margin-bottom: 20px;
+            border: 1px solid $registr-color;
+            box-sizing: border-box;
+        }
+
+        &_property::placeholder {
+            color: $black;
+        }
+
+    }
+
+    &__btn_quote {
+        margin-top: 3px;
+        margin-bottom: 57px;
+        text-transform: uppercase;
+        background-color: $white;
+        border: 1px solid $registr-color;
+        color: $cart-quote;
+        padding: 12px 15px;
+    }
+
+    &__btn_quote:focus {
+        color: $pink;
+        outline: 1px solid $pink;
+        border: 1px solid $pink;
+    }
+
+    &__btn_quote:hover {
+        color: $black;
+        background: $light-pink;
+        outline: 1px solid $grey;
+    }
+
+    &__btn_quote:active {
+        color: $white;
+        background: $pink;
+        outline: 1px solid $pink;
+    }
+
+    &__total {
+        width: 275px;
+        background-color: $cart-total;
+        padding: 43px;
+    }
+
+    &__total_wrp {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__total_sub {
+        @include font (11px);
+        color: $cart-quote;
+        text-transform: uppercase;
+        padding-right: 20px;
+        margin-bottom: 12px;
+    }
+
+    &__total_sub-value {
+        @include font (11px);
+        color: $cart-quote;
+    }
+
+    &__total_grand {
+        @include font (16px);
+        color: $black;
+        text-transform: uppercase;
+        padding-right: 20px;
+        margin-bottom: 21px;
+    }
+
+    &__total_grand-value {
+        @include font (16px, 100%, 700);
+        color: $pink;
+    }
+
+    &__total_hr {
+        color: $cart-hr;
+        margin: 0 0 17px 0;
+    }
+
+
+    &__total_btn {
+        width: 100%;
+        padding: 15px 0;
+        background-color: $pink;
+        text-transform: uppercase;
+        color: $white;
+        @include font (16px);
+        border: none;
+    }
+
+    &__total_btn:focus {
+        color: $grey;
+        outline: 1px solid grey;
+    }
+
+    &__total_btn:hover {
+        color: $grey;
+        outline: 1px solid grey;
+    }
+
+    &__total_btn:active {
+        background-color: $light-pink;
+    }
+}

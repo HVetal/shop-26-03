@@ -1,0 +1,138 @@
+.fetured {
+
+    &__title {
+        @include font (30px, 100%);
+        margin: 97px 0 6px 0;
+        text-align: center;
+        color: $black;
+    }
+
+    &__subtitle {
+        @include font ();
+        text-align: center;
+        color: $grey;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 48px;
+    }
+
+    &__item {
+        width: 360px;
+        margin-bottom: 30px;
+        background-color: $light-grey;
+        position: relative;
+    }
+
+    &__heading {
+        @include font (13px, 100%);
+        color: $total-black;
+        text-transform: uppercase;
+        margin: 25px 18px 12px;
+    }
+
+    &__text {
+        @include font ();
+        color: $text-card;
+        margin: 18px;
+        box-sizing: border-box;
+    }
+
+    &__price {
+        @include font (16px, 100%);
+        color: $pink;
+        margin: 18px;
+        box-sizing: border-box;
+    }
+
+    &__overlay {
+        width: 100%;
+        min-height: 580px;
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 0;
+    }
+
+    &__card-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 15px 15px 15px 50px;
+        background-color: transparent;
+        color: $white;
+        border: 1px solid $white;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+
+        &:hover {
+            background-color: $grey;
+            border: 1px solid $black;
+        }
+
+        &:focus {
+            background-color: $pink;
+        }
+
+        &:active {
+            color: $black;
+        }
+
+        &::before {
+            content: "";
+            width: 26px;
+            height: 24px;
+            background-image: url(../img/cart.svg);
+            background-size: 26px 24px;
+            left: 16px;
+            top: 10px;
+            position: absolute;
+        }
+    }
+
+    &__overlay,
+    &__card-btn {
+        display: none;
+    }
+
+    &__item:hover &__card-btn,
+    &__item:hover &__overlay {
+        display: block;
+    }
+
+    &__btn_wrp {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn {
+        @include font (16px);
+        padding: 15px 39px;
+        margin: 18px 0 95px;
+        color: $pink;
+        border: 1px solid $pink;
+        background-color: $white;
+
+        &:hover {
+            color: $white;
+            border: 1px solid $pink;
+            background-color: $pink;
+        }
+
+        &:active {
+            color: $grey;
+            border: 1px solid $grey;
+            background-color: $white;
+        }
+
+        &:focus {
+            color: $pink;
+            border: 1px solid $grey;
+            background-color: $light-pink;
+        }
+    }
+}
