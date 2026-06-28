@@ -1,0 +1,57 @@
+.brand {
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+
+    &__overlay {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 1600px;
+            min-height: 764px;
+            background: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            z-index: 2;
+            top: 0;
+        }
+    }
+
+    &__wrp {
+        background-color: $light-pink;
+        flex-grow: 1;
+        padding: 0 0 0 92px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: $font-lato;
+        @include font (48px, 58px, 900);
+        text-transform: uppercase;
+        color: $black;
+        position: relative;
+
+        &::after {
+            content: " ";
+            position: absolute;
+            width: 12px;
+            height: 92px;
+            background-color: $pink;
+            left: -26px;
+            top: 0;
+
+        }
+    }
+
+
+
+    &__subtitle {
+        display: flex;
+        @include font (32px, 100%, 700);
+    }
+
+    &__subtitle-pink {
+        color: $pink;
+    }
+}

@@ -1,0 +1,144 @@
+.header {
+    background-color: $black;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    &__wrp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 75px;
+        position: relative;
+    }
+
+    &__wrp-controls {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin: 0 41px 0 0;
+    }
+
+    &__reg {
+        margin: 0 0 0 31px;
+    }
+
+    &__cart {
+        margin: 0 0 0 31px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "5";
+            @include font (12px);
+            color: $white;
+            background-color: $pink;
+            border-radius: 50%;
+            top: -8px;
+            right: -10px;
+            padding: 4px 6px;
+        }
+    }
+
+    &__menu-btn {
+        border: none;
+        background-color: transparent;
+    }
+
+    &__nav {
+        position: absolute;
+        width: 232px;
+        height: 764px;
+        background-color: $white;
+        color: $black;
+        right: -232px;
+        top: 75px;
+        box-shadow: 6px 4px 35px 0px $grey;
+        display: none;
+        z-index: 3;
+
+        &:hover {
+            display: block;
+        }
+    }
+
+    &__menu-visible {
+        display: block;
+    }
+
+    &__nav-title {
+        @include font (14px, 100%, 700);
+        text-transform: uppercase;
+        margin: 34px 0 27px 34px;
+    }
+
+    &__search {
+        fill: $white;
+    }
+
+    &__search_btn {
+        background-color: $black;
+        border: 0;
+        margin-right: 15px;
+    }
+
+
+
+    &__search_loope {
+
+        &:hover {
+            fill: $pink;
+        }
+
+        &:focus {
+            fill: $light-pink;
+        }
+
+        &:active {
+            fill: $grey;
+        }
+
+    }
+
+    &__search_input {
+        width: 170px;
+        height: 27px;
+        border: 1px solid $white;
+        background-color: $white;
+        color: $white;
+        @include font ();
+        border-radius: 2px;
+        margin-right: 15px;
+        padding-left: 10px;
+        font-family: $font-lato;
+
+        &:hover {
+            border: 1px solid $pink;
+        }
+
+        &:focus {
+            border: 1px solid $light-pink;
+        }
+
+        &:active {
+            border: 1px solid $grey;
+        }
+    }
+
+    &__icon-color {
+        fill: $icon-color;
+    }
+
+    &__icon-color:hover {
+        fill: $pink;
+    }
+
+    &__icon-color:focus {
+        fill: $light-pink;
+    }
+
+    &__icon-color:active {
+        fill: $grey;
+    }
+}

@@ -1,0 +1,13 @@
+@mixin font($font-size: 14px, $line-height: 100%, $font-weight: 400, $font-style: normal, $letter-spacing: 0%) {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

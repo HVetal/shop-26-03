@@ -1,0 +1,22 @@
+.page {
+    font-family: $font-lato;
+    @include font (14px, 17px, 300);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(50%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
