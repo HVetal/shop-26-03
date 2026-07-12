@@ -1,13 +1,22 @@
 .footer {
-    width: 1600px;
+    max-width: 1600px;
+    // width: 100%;
     height: 100%;
     margin: 0 auto;
     background-image: url(../img/bgi_footer.png);
     background-repeat: no-repeat;
 
+    @include tablet {
+        background-size: cover;
+    }
+
     &__wrp {
         display: flex;
         justify-content: space-between;
+
+        @include tablet {
+            flex-direction: column;
+        }
     }
 
     &__box {
@@ -15,6 +24,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include tablet {
+            margin: 64px 0 48px;
+        }
     }
 
     &__box-text {
@@ -23,6 +36,10 @@
         text-align: center;
         margin-top: 30px;
         color: $black;
+
+        @include mobile {
+            @include font (18px);
+        }
     }
 
     &__box--italic {
@@ -32,6 +49,10 @@
     &__subscribe {
         @include flex-center;
         flex-direction: column;
+
+        @include tablet {
+            margin-bottom: 140px;
+        }
     }
 
     &__subscribe-subtitle {
@@ -39,12 +60,20 @@
         color: $black;
         text-transform: uppercase;
         margin-bottom: 32px;
+
+        @include mobile {
+            @include font (14px, 153%, 400);
+        }
     }
 
     &__subscribe-title {
         @include font (24px, 167%, 700);
         color: $black;
         text-transform: uppercase;
+
+        @include mobile {
+            @include font (24px, 153%, 700);
+        }
     }
 
     &__subscribe-form {
@@ -62,6 +91,11 @@
         border: 0;
         padding-left: 22px;
         border-radius: 25px 0 0 25px;
+
+        @include mobile {
+            width: 240px;
+            height: 46px;
+        }
     }
 
     &__subscribe-btn {
@@ -75,6 +109,11 @@
         vertical-align: middle;
         border: 0;
 
+        @include mobile {
+            width: 90px;
+            height: 46px;
+        }
+
         &:hover {
             background-color: $light-pink;
             color: $pink;
@@ -87,7 +126,7 @@
 
     &__socials {
         background-color: $black;
-        width: 1600px;
+        max-width: 1600px;
         margin: 0 auto;
     }
 
@@ -96,6 +135,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+            flex-direction: column-reverse;
+            padding: 43px 0 9px;
+        }
     }
 
     &__socials_text {

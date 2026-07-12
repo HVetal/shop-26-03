@@ -1,19 +1,44 @@
 .brand {
-    width: 1600px;
+    max-width: 1600px;
     margin: 0 auto;
     display: flex;
+
+    @include tablet {
+        min-width: 767px;
+    }
+
+    @include mobile {
+        min-width: 375px;
+    }
+
+    &__img {
+        width: 50%;
+
+        @include tablet {
+            height: auto;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
 
     &__overlay {
         position: relative;
 
         &::before {
             content: '';
-            width: 1600px;
+            // width: 1600px;
+            position: absolute;
+            width: 100%;
             min-height: 764px;
             background: rgba(0, 0, 0, 0.4);
-            position: absolute;
             z-index: 2;
             top: 0;
+
+            @include tablet {
+                min-height: 100%;
+            }
         }
     }
 
@@ -23,6 +48,19 @@
         padding: 0 0 0 92px;
         display: flex;
         align-items: center;
+
+        @include tablet {
+            padding: 0 0 0 68px;
+        }
+
+
+        @include mobile {
+            min-height: 363px;
+            // flex-grow: 0;
+            justify-content: center;
+            padding: 0 0 0 83px;
+            // min-width: $mobile-width;
+        }
     }
 
     &__title {
@@ -41,14 +79,38 @@
             left: -26px;
             top: 0;
 
+            @include tablet {
+                top: -9px;
+            }
+
+            @include mobile {
+                width: 12px;
+                height: 61px;
+                top: -4px;
+            }
+
+        }
+
+        @include tablet {
+            @include font (44px, 100%, 900);
+        }
+
+        @include mobile {
+            @include font (38px, 100%, 900);
         }
     }
-
-
 
     &__subtitle {
         display: flex;
         @include font (32px, 100%, 700);
+
+        @include tablet {
+            @include font (24px, 100%, 700);
+        }
+
+        @include mobile {
+            @include font (20px, 100%, 700);
+        }
     }
 
     &__subtitle-pink {
