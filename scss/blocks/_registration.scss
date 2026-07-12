@@ -1,5 +1,5 @@
 .registration {
-    width: 1600px;
+    max-width: 1600px;
     height: 148px;
     margin: 0 auto;
     background-color: $registr-bgnd;
@@ -8,6 +8,10 @@
         height: 148px;
         display: flex;
         align-items: center;
+
+        @include tablet {
+            margin-left: 16px;
+        }
     }
 
     &__title {
@@ -20,6 +24,15 @@
         background-color: $white;
         display: flex;
         margin-top: 64px;
+
+        @include tablet {
+            margin: 40px 16px 0 16px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            margin: 40px 8px 96px;
+        }
     }
 
     &__legend {
@@ -45,6 +58,7 @@
         color: $registr-text;
         @include font (13px);
         padding-left: 17px;
+        box-sizing: border-box;
     }
 
     &__first-name,
@@ -109,6 +123,10 @@
         margin-bottom: 96px;
         color: $white;
 
+        @include mobile {
+            margin-bottom: 40px;
+        }
+
         &:active {
             background-color: $light-pink;
         }
@@ -126,6 +144,10 @@
 
     &__content {
         margin-left: 128px;
+
+        @include tablet {
+            margin-left: 22px;
+        }
     }
 
     &__content_title {
@@ -133,12 +155,21 @@
         text-transform: uppercase;
         color: $total-black;
         margin-bottom: 22px;
+
+        @include tablet {
+            @include font (16px);
+        }
     }
 
     &__content_text {
         @include font (24px);
         color: $total-black;
         margin-bottom: 21px;
+
+        @include tablet {
+            @include font (16px);
+            margin-bottom: 32px;
+        }
     }
 
     &__content_item {
@@ -156,6 +187,10 @@
             background-image: url(../img/checkmark.svg);
             background-size: 20px 16px;
             left: 0;
+        }
+
+        @include tablet {
+            @include font (16px);
         }
     }
 
