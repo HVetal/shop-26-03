@@ -22,11 +22,19 @@
 
     &__reg {
         margin: 0 0 0 31px;
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &__cart {
         margin: 0 0 0 31px;
         position: relative;
+
+        @include mobile {
+            display: none;
+        }
 
         &::after {
             position: absolute;
@@ -49,7 +57,7 @@
     &__nav {
         position: absolute;
         width: 232px;
-        height: 764px;
+        min-height: 764px;
         background-color: $white;
         color: $black;
         right: -232px;
@@ -57,6 +65,11 @@
         box-shadow: 6px 4px 35px 0px $grey;
         display: none;
         z-index: 3;
+
+        @include tablet {
+            right: -31px;
+            // min-height: auto;
+        }
 
         &:hover {
             display: block;
@@ -142,3 +155,15 @@
         fill: $grey;
     }
 }
+
+// @media (max-width: $mobile-width) {
+//     .header {
+//         &__reg {
+//             display: none;
+//         }
+
+//         &__cart {
+//             display: none;
+//         }
+//     }
+// }
