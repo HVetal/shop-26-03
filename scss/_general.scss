@@ -1,6 +1,6 @@
 .page {
     font-family: $font-lato;
-    @include font (14px, 17px, 300);
+    @include font (14px, 100%, 400);
 }
 
 .visually-hidden {
@@ -36,6 +36,29 @@
 
 @media (max-width: $mobile-cart-width) {
     .container {
+        width: 96%;
+    }
+}
+
+.container-bootstrap {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+@media (max-width: $tablet-width) {
+    .container-bootstrap {
+        width: 96%;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .container-bootstrap {
+        width: 91%;
+    }
+}
+
+@media (max-width: $mobile-cart-width) {
+    .container-bootstrap {
         width: 96%;
     }
 }

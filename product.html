@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Registration</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+    <title>Cart</title>
 </head>
 
 <body class="page">
     <header class="header">
-        <div class="container header__wrp">
+        <div class="container-bootstrap header__wrp">
             <div class="header__wrp-controls">
                 <a href="index.html"><img class="header__logo" src="img/logo.svg" alt="logo"></a>
                 <form action="">
@@ -119,70 +122,152 @@
         </div>
     </header>
     <main>
-        <section>
-            <div class="registration">
-                <h1 class="visually-hidden">Registration</h1>
-                <div class="registration__header container">
-                    <p class="registration__title">registration</p>
-                </div>
-            </div>
-            <div class="registration__wrp container">
-                <form class="registration__form" action="#">
-                    <fieldset class="registration__form_name">
-                        <legend class="registration__legend">Your Name</legend>
+        <section class="product">
+            <h1 class="visually-hidden">Product</h1>
+            <div class="product__header">
+                <div class="product__header_box container-bootstrap">
 
-                        <label for="first-name"><span class="visually-hidden">First Name</span></label>
-                        <input class="registration__first-name" type="text" placeholder="First Name" name="first-name"
-                            id="first-name" required>
-                        <label for="last-name"><span class="visually-hidden">Last Name</span></label>
-                        <input class="registration__last-name" type="text" placeholder="Last Name" name="last-name"
-                            id="last-name" required>
-                        <div class="registration__form_gender">
-                            <input class="registration__gender" type="radio" name="gender" id="male" required>
-                            <label class="registration__gender_label" for="male"><span
-                                    class="registration__gender_span">Male</span></label>
-                            <input class="registration__gender" type="radio" name="gender" id="female" required>
-                            <label class="registration__gender_label" for="female"><span
-                                    class="registration__gender_span">Female</span></label>
-                        </div>
-                    </fieldset>
-                    <fieldset class="registration__form_login">
-                        <legend class="registration__legend">Login details</legend>
-                        <label for="email"><span class="visually-hidden">Email</span></label>
-                        <input type="email" class="registration__email" placeholder="Email" name="email" id="email"
-                            required>
-                        <label for="password"><span class="visually-hidden">Password</span></label>
-                        <input type="password" class="registration__password" placeholder="Password" name="password"
-                            id="password" required>
-                    </fieldset>
-                    <p class="registration__form_text">Please use 8 or more characters, with at least 1 number and a
-                        mixture of uppercase and lowercase letters</p>
-                    <button type="submit" class="registration__btn">JOIN NOW</button>
-                </form>
-                <div class="registration__content">
-                    <h2 class="registration__content_title">loyalty has its perks</h2>
-                    <p class="registration__content_text">Get in on the loyalty program where you can earn points
-                        and
-                        unlock serious perks. Starting with these as soon as you join:</p>
-                    <ul class="registration__content_list">
-                        <li class="registration__content_item">15% off welcome offer
-                        </li>
-                        <li class="registration__content_item">Free shipping, returns and exchanges on all orders
-
-                        </li>
-                        <li class="registration__content_item">$10 off a purchase on your birthday
-
-                        </li>
-                        <li class="registration__content_item">Early access to products</li>
-                        <li class="registration__content_item">Exclusive offers & rewards</li>
+                    <div class="product__header_wrp">
+                        <p class="product__header_title">new arrivals</p>
+                    </div>
+                    <ul class="product__header_list">
+                        <li class="product__header_item"><a class="product__header_link" href="#"> HOME / </a></li>
+                        <li class="product__header_item"><a class="product__header_link" href="#"> MEN / </a></li>
+                        <li class="product__header_item"><a class="product__header_link product__header_color"
+                                href="#">NEW
+                                ARRIVALS</a></li>
                     </ul>
                 </div>
             </div>
-        </section>
 
+
+            <div class="product__slider">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="img-position carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/product.jpg" class="d-block img-size" alt="product">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/product.jpg" class="d-block img-size" alt="product">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/product.jpg" class="d-block img-size" alt="product">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                        <i class="fa-solid fa-arrow-left fa-2xl product__slider_left"></i>
+                        <!-- <i class="far fa-arrow-left" style="color: hsl(0, 0%, 3%);"></i> -->
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                        <i class="fa-solid fa-arrow-right fa-2xl product__slider_right"></i>
+                        <!-- <i class="far fa-arrow-right" style="color: hsl(0, 0%, 3%);"></i> -->
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="product__description container-bootstrap">
+                <div class="product__description_collection">women collection</div>
+                <div class="product__description_label">moschino cheap and chic</div>
+                <div class="product__description_specification">Compellingly actualize fully researched
+                    processes before proactive outsourcing. Progressively syndicate collaborative
+                    architectures before cutting-edge services. Completely visualize parallel core
+                    competencies rather than exceptional portals. </div>
+                <div class="product__description_price">$561</div>
+                <div class="product__description_hr"></div>
+
+                <div class="product__description_dropdown">
+                    <div class="dropdown dropdown__color">
+                        <button class="btn-secondary dropdown-toggle dropdown__btn" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            choose color
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Red</a></li>
+                            <li><a class="dropdown-item" href="#">Green</a></li>
+                            <li><a class="dropdown-item" href="#">White</a></li>
+                            <li><a class="dropdown-item" href="#">Black</a></li>
+                            <li><a class="dropdown-item" href="#">Yellow</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown dropdown__size">
+                        <button class="btn-secondary dropdown-toggle dropdown__btn" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            choose size
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">S</a></li>
+                            <li><a class="dropdown-item" href="#">M</a></li>
+                            <li><a class="dropdown-item" href="#">L</a></li>
+                            <li><a class="dropdown-item" href="#">XL</a></li>
+                            <li><a class="dropdown-item" href="#">XXL</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown dropdown__quantity">
+                        <button class="btn-secondary dropdown-toggle dropdown__btn" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            quantity
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">1</a></li>
+                            <li><a class="dropdown-item" href="#">2</a></li>
+                            <li><a class="dropdown-item" href="#">3</a></li>
+                            <li><a class="dropdown-item" href="#">4</a></li>
+                            <li><a class="dropdown-item" href="#">5</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <button type="button" class="btn-outline-primary product__description_btn">Add to Cart</button>
+            </div>
+
+            <div class="product__fetured container-bootstrap">
+                <div class="col-12 col-md-6 col-xl-4 fetured__item">
+                    <img class="fetured__img" src="img/product-1.jpg" alt="product-1">
+                    <h3 class="fetured__heading">ellery x m'o capsule</h3>
+                    <p class="fetured__text">Known for her sculptural takes on traditional tailoring, Australian
+                        arbiter
+                        of cool Kym Ellery
+                        teams up with Moda Operandi.</p>
+                    <p class="fetured__price">$52.00</p>
+                    <div class="fetured__overlay"></div>
+                    <button class="fetured__card-btn">Add to cart</button>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4 fetured__item">
+                    <img class="fetured__img" src="img/product-2.jpg" alt="product-2">
+                    <h3 class="fetured__heading">ellery x m'o capsule</h3>
+                    <p class="fetured__text">Known for her sculptural takes on traditional tailoring, Australian
+                        arbiter
+                        of cool Kym Ellery
+                        teams up with Moda Operandi.</p>
+                    <p class="fetured__price">$52.00</p>
+                    <div class="fetured__overlay"></div>
+                    <button class="fetured__card-btn">Add to cart</button>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4 fetured__item product__card-disable">
+                    <img class="fetured__img" src="img/product-3.jpg" alt="product-3">
+                    <h3 class="fetured__heading">ellery x m'o capsule</h3>
+                    <p class="fetured__text">Known for her sculptural takes on traditional tailoring, Australian
+                        arbiter
+                        of cool Kym Ellery
+                        teams up with Moda Operandi.</p>
+                    <p class="fetured__price">$52.00</p>
+                    <div class="fetured__overlay"></div>
+                    <button class="fetured__card-btn">Add to cart</button>
+                </div>
+            </div>
+
+        </section>
     </main>
     <footer class="footer">
-        <div class="footer__wrp container">
+        <div class="footer__wrp container-bootstrap">
             <div class="footer__box">
                 <img class="footer__box-img" src="img/foto.png" alt="foto">
                 <p class="footer__box-text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <span
@@ -204,7 +289,7 @@
             </div>
         </div>
         <div class="footer__socials">
-            <div class="footer__socials_wrp container">
+            <div class="footer__socials_wrp container-bootstrap product__socials_wrp">
                 <p class="footer__socials_text">© 2021 Brand All Rights Reserved.</p>
                 <ul class="footer__socials_list">
                     <li class="footer__socials_item">
@@ -271,7 +356,10 @@
             </div>
         </div>
     </footer>
-
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script> -->
+    <script src="js/bootstrap.bundle.js"></script>
     <script src="js/script.js"></script>
 </body>
 
