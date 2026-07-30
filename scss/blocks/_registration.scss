@@ -117,11 +117,23 @@
     }
 
     &__btn {
-        padding: 16px 29px;
+        padding: 16px 75px 16px 29px;
         border: none;
         background-color: $pink;
         margin-bottom: 96px;
         color: $white;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            background-size: 17px 10px;
+            width: 17px;
+            height: 10px;
+            background-image: url(../../img/right-arrow.svg);
+            top: 18px;
+            right: 33px;
+        }
 
         @include mobile {
             margin-bottom: 40px;
